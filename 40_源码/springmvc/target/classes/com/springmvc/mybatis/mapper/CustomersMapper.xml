@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springmvc.mybatis.mapper.CustomersMapper" >
+  <resultMap id="BaseResultMap" type="com.springmvc.model.Customers" >
+    <id column="XH" property="xh" jdbcType="INTEGER" />
+    <result column="XM" property="xm" jdbcType="VARCHAR" />
+    <result column="HYJB" property="hyjb" jdbcType="INTEGER" />
+  </resultMap>
+  <select id="selectCountById" resultType="java.lang.Integer">
+      select count(*) from customers where xh=1
+  </select>
+</mapper>
